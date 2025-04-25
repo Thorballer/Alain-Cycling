@@ -27,13 +27,13 @@ if A > B:
             break
 
         else:
-            if n >= 100:
+            if n >= 10:
                 print("You're cooked chat, it doesn't work")
                 print("Better grab the calc (calc is short for calulator)")
                 break
 
             n+=1
-elif B >= A:
+elif B > A:
     while True:
         w = (k ** n) % c
         print(f'For n: {n}, value is {w} ')
@@ -46,9 +46,16 @@ elif B >= A:
             print(f'Fraction answer is: {q}')
             break
         else:
-            if n >= 100:
+            if n >= 10:
                 print("You're cooked chat, it doesn't work")
                 print("Better grab the calc (calc is short for calulator)")
                 break
 
             n += 1
+            
+elif B == A:
+    q = B/c
+    print(f"Decimal value is: {q}")
+    q = Fraction(q).limit_denominator()
+    print(f'Fraction answer is: {q}')
+    
